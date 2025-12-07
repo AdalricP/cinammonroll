@@ -4,6 +4,9 @@ A sophisticated voice agent built with [Pipecat](https://github.com/pipecat-ai/p
 
 📋 **[View Challenge Tracks](opal-chall.pdf)** - Complete information about the challenge and available tracks.
 
+<img width="1680" height="1490" alt="image" src="https://github.com/user-attachments/assets/bfdd8f65-774f-4a42-98b1-641ebf4aeee0" />
+
+
 ## ✨ Features
 
 - **Voice Interaction**: Real-time voice conversation using Deepgram STT and Cartesia TTS
