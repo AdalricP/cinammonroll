@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.phone-container {
+    background: #111;
+    border: 1px solid #333;
+    width: 320px;
+    height: 700px;
+    border-radius: 0;
+    /* No rounded corners */
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.transcription-container {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.transcription-container h3 {
+    margin: 0 0 16px 0;
+    font-weight: 500;
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.transcript-log {
+    flex: 1;
+    background: #0a0a0a;
+    border: 1px solid #222;
+    padding: 16px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.transcript-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.transcript-item.user {
+    color: #4CAF50;
+}
+
+.transcript-item.bot {
+    color: #2196F3;
+}
+
+.transcript-item.system {
+    color: #666;
+    font-style: italic;
+}
+
+.transcript-item.thought {
+    color: #aaa;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    border-left: 2px solid #555;
+    padding-left: 8px;
+    margin-left: 4px;
+}
+
+.screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.call-info {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.call-info h2 {
+    font-weight: 500;
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+}
+
+.call-info p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 8px 0 0;
+    font-weight: 400;
+}
+
+.display-area {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 0 24px;
+    margin-bottom: 24px;
+    justify-items: center;
+    /* Centers items horizontally in their cells */
+}
+
+.key {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    /* Less rounded */
+    width: 60px;
+    /* Smaller */
+    height: 60px;
+    /* Smaller */
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(4px);
+}
+
+.key:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.key:active,
+.key.active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.key span {
+    font-size: 10px;
+    margin-top: 2px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.control-btn {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.end-call {
+    background-color: #ff3b30;
+    box-shadow: 0 4px 20px rgba(255, 59, 48, 0.3);
+}
+
+/* Animations */
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
